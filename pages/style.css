@@ -1,31 +1,36 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --main-background-color: green;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
   display: flex;
   width: 100%;
   height: 80px;
-  background-color: green;
+  background-color: var(--main-background-color);
 }
 
 .content {
   width: 100%;
   background-color: white;
-  /* height:500px; */
-
+  overflow: auto;
 }
 
 .footer {
   width: 100%;
-  background-color: green;
+  background-color: var(--main-background-color);
   text-align: center;
   justify-content: center;
-  height:30px;
+  height: 30px;
 }
 
 .header-content {
@@ -78,7 +83,7 @@ select {
 }
 
 .btn {
-  background-color: green;
+  background-color: var(--main-background-color);
   color: black;
   padding: 5px 5px;
   margin: 4px 4px;
@@ -100,7 +105,7 @@ select {
 .dropdown-btn-content {
   display: none;
   position: absolute;
-  background-color:white;
+  background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(167, 163, 163, 0.2);
   border-radius: 15px;
   min-width: 110px;
@@ -122,7 +127,7 @@ select {
 }
 
 .card {
-  border-radius:15px;
+  border-radius: 15px;
   box-shadow: 0 8px 16px 0 rgba(165, 173, 164, 0.2);
   width: 20%;
   margin: 2px 2px;
@@ -134,11 +139,4 @@ select {
 
 .card-body {
   padding: 2px 16px;
-}
-
-@media (max-width: 600px) {
-  .content{
-    width: 100%;
-    height: auto;
-  }
 }
